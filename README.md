@@ -17,7 +17,7 @@
 
 ## Ссылки
 
-[Наш Discord](https://discord.gg/3tZ3BWjCdC)
+[Наш Discord]([https://discord.gg/3tZ3BWjCdC](https://discord.gg/Nsy7FWy76x))
 [Наш Boosty](https://boosty.to/pizdec_station_14)
 
 ## Больше тут нечего нет.

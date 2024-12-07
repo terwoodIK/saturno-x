@@ -1,0 +1,42 @@
+- type: gamePreset
+  id: DeathmatchTRWD
+  alias:
+    - TRWDdeathmatch
+    - trwddm
+  name: Мясорубка+
+  description: Рви и терзай!
+  maxPlayers: 30
+  showInVote: true
+  rules:
+    - DeathMatchTRWD
+
+- type: entity
+  id: DeathMatchTRWD
+  parent: BaseGameRule
+  components:
+  - type: DeathMatchRule
+    rewardSpawns:
+    - id: BaseUplinkRadio20TC
+    - id: CombatMedipen
+      orGroup: loot
+    - id: RiotBulletShield
+    - id: RiotLaserShield
+    - id: RiotShield
+      orGroup: loot
+    - id: ClothingOuterHardsuitMaxim
+      orGroup: loot
+    - id: WeaponXrayCannon
+      orGroup: loot
+    - id: Emag
+      orGroup: loot
+    - id: ClothingShoesBootsMagBlinding
+      orGroup: loot
+    - id: FoodPieBananaCream
+      orGroup: loot
+    - id: Stimpack
+      orGroup: loot
+  - type: KillCalloutRule
+  - type: PointManager
+  - type: RespawnDeadRule
+  - type: RespawnTracker
+    respawnDelay: 5

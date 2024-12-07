@@ -1,0 +1,75 @@
+# V1
+
+- type: entity
+  name: V1
+  parent:
+  - MobFlammable
+  - BaseMobSpecies
+  id: V1
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: TRWDS/ULTRAKILL/V1.rsi
+    state: creature_of_steel
+  - type: Icon
+    sprite: TRWDS/ULTRAKILL/V1.rsi
+    state: icon
+  - type: Body
+    prototype: Skeleton
+    requiredLegs: 2
+    gibSound: /Audio/Effects/alert.ogg
+  - type: Damageable
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Dead
+  - type: TransferMindOnGib
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:GibBehavior { }
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      100: 1.2
+      150: 1.5
+  - type: ZombieImmune
+  - type: Vocal
+    sounds:
+      Unsexed: UnisexSilicon
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 130
+        restitution: 0.0
+        mask:
+          - MobMask
+        layer:
+          - MobLayer
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Blood, InsectBlood, CopperBlood, AmmoniaBlood ]
+      methods: [ Touch ]
+      effects: 
+      - !type:HealthChange
+        scaleByQuantity: true
+        damage:
+          groups:
+            Burn: -30 # BLOOD IS FUEL
+            Brute: -20 # BLOOD IS FUEL
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "BLOOD IS FUEL" ]
+        probability: 0.25
+  - type: FireVisuals
+    alternateState: Standing

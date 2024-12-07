@@ -1,0 +1,86 @@
+#------Синдикат------#
+#-Инженер-#
+- type: entity
+  parent: MobHuman
+  id: MobHumanSyndEng
+  name: инженер синдиката
+  components:
+  - type: Loadout
+    prototypes: [SyndicateEngiGear]
+  - type: RandomHumanoidAppearance
+- type: startingGear
+  id: SyndicateEngiGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitRepairmanSyndie
+    back: ClothingBackpackDuffelSyndicateAmmo
+    shoes: ClothingShoesBootsWork
+    eyes: ClothingEyesGlassesMeson
+    id: SyndicateEngiPDA
+    ears: ClothingHeadsetAltSyndicate
+    head: ClothingHeadHatHardhatRed
+    belt: ClothingBeltUtilityEngineering
+    gloves: ClothingHandsGlovesColorYellow
+- type: entity
+  parent: BasePDA
+  id: SyndicateEngiPDA
+  name: КПК инженера синдиката
+  description: Окей, время строить це-... Оу, я плохой парень, время строить турели!
+  components:
+  - type: Pda
+    id: SyndicateEngiIDCard
+    state: pda-syndi
+  - type: PdaBorderColor
+    borderColor: "#891417"
+  - type: Icon
+    state: pda-syndi
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    preinstalled:
+      - NotekeeperCartridge
+    cartridgeSlot:
+      priority: -1
+      name: Cartridge
+      ejectSound: /Audio/Machines/id_swipe.ogg
+      insertSound: /Audio/Machines/id_insert.ogg
+      whitelist:
+        components:
+          - Cartridge
+- type: entity
+  parent: IDCardStandard
+  id: SyndicateEngiIDCard
+  name: ID карта инженера синдиката
+  components:
+  - type: Sprite
+    layers:
+    - state: syndie
+    - state: idstationengineer
+  - type: Access
+    tags:
+    - NuclearOperative
+    - SyndicateAgent
+
+#-Лесной Разведчик-#
+
+- type: entity
+  parent: MobHuman
+  id: MobHumanSyndScout
+  name: лесной разведчик синдиката
+  components:
+  - type: Loadout
+    prototypes: [SyndicateScoutGear]
+  - type: RandomHumanoidAppearance
+- type: startingGear
+  id: SyndicateScoutGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSyndieFormal
+    back: ClothingBackpackMilitarySatchel
+    shoes: ClothingShoesSwat
+    eyes: ClothingEyesHudSyndicateAgent
+    id: SyndiPDA
+    ears: ClothingHeadsetAltSyndicate
+    head: ClothingHeadHatSyndie
+    pocket1: ToolDebug
+    pocket2: WeaponPistolCobra
+    belt: SyndicateJawsOfLife
+    gloves: ClothingHandsGlovesFingerless
+    outerClothing: ClothingOuterArmorBasicSlim

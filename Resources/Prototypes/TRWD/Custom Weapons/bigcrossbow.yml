@@ -1,0 +1,69 @@
+- type: entity
+  name: энерго-арбалет синдиката
+  parent: BaseItem
+  id: WeaponBigSyndicateCrossbow
+  description: Оружие, излюбленное специалистами синдиката предпочитающим работать открыто... Но тихо.
+  components:
+  - type: Sprite
+    sprite: TRWDS/weapons/bigcrossbow.rsi
+    state: base
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,4,0
+    sprite: TRWDS/weapons/bigcrossbow.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/batrifle.ogg
+  - type: BasicEntityAmmoProvider
+    proto: BulletBigCrossbow
+    capacity: 1
+    count: 1
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: true
+  - type: Appearance
+  - type: UseDelay
+    delay: 1
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 2.10
+  - type: GunRequiresWield
+
+- type: entity
+  id: BulletBigCrossbow
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    color: "#ffff33"
+    layers:
+    - state: magicm_green
+      shader: unshaded
+  - type: Ammo
+  - type: Projectile
+    damage:
+      types:
+        Poison: 45
+    soundHit:
+      path: "/Audio/Weapons/Guns/Hits/taser_hit.ogg"
+    forceSound: true
+  - type: StunOnCollide
+    stunAmount: 10
+    knockdownAmount: 5
+  - type: GatheringProjectile
+
+- type: listing
+  id: UplinkBigSyndicateCrossbow
+  name: энерго-арбалет синдиката
+  description: Оружие, излюбленное специалистами синдиката предпочитающим работать открыто... Но тихо.
+  productEntity: WeaponBigSyndicateCrossbow
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 8
+  cost:
+    Telecrystal: 18
+  categories:
+  - UplinkWeaponry

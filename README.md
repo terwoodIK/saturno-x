@@ -1,8 +1,8 @@
 <p align="center"> <img alt="Space Station 14" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg" /></p>
 
-Личная сборка сервера Space Station 14 такой личности как terwood. Все его сервера работают именно на этой сборке(За исклюением Medival Shadows).
+Личная сборка сервера Space Station 14 такой личности как "Пивной Груз". Все его сервера работают именно на этой сборке(За исклюением Medival Shadows).
 
-На данный момент на этой сборке работает только [NRP][RuS]Пиздец Станция 14.
+На данный момент на этой сборке работает только [NRP][RuS]Lost in Nebula.
 
 ## RoadMap до конца года:
 1. [❌] Добавление определённых пушек из Team Fortress 2. (Выполнено на ~20%)
@@ -17,7 +17,7 @@
 
 ## Ссылки
 
-[Наш Discord]([https://discord.gg/3tZ3BWjCdC](https://discord.gg/Nsy7FWy76x))
+[Наш Discord](https://discord.gg/mZYHbDNrcq)
 [Наш Boosty](https://boosty.to/pizdec_station_14)
 
 ## Больше тут нечего нет.

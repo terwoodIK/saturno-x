@@ -27,9 +27,9 @@
     zeroVisible: true
   - type: Appearance
   - type: UseDelay
-    delay: 1
+    delay: 3
   - type: RechargeBasicEntityAmmo
-    rechargeCooldown: 0.75
+    rechargeCooldown: 5.2
 
 - type: entity
   id: BulletCrossbow
@@ -53,5 +53,5 @@
     forceSound: true
   - type: StunOnCollide
     stunAmount: 1
-    knockdownAmount: 1
+    knockdownAmount: 3
   - type: GatheringProjectile
